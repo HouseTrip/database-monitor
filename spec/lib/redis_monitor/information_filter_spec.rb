@@ -4,7 +4,7 @@ module RedisMonitor
   describe InformationFilter do
 
     let(:relevant_attributes) { ["used_memory"] }
-    let(:info) { RedisAdaptor.connection.info }
+    let(:info) { RedisConnection.info }
 
     describe "#relevant_only" do
       it "should filter the attributes on relevant source only" do

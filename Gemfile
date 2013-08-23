@@ -1,6 +1,8 @@
 source "http://rubygems.org"
 
 gem 'redis'
+gem 'dogstatsd-ruby'
+gem 'dogapi'
 
 group :development do
   gem "rspec", "~> 2.8.0"
