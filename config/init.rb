@@ -4,7 +4,7 @@ Bundler.require
 
 require 'redis'
 RedisConnection = Redis.new(
-  :dns => (ENV['REDIS_DNS'] || 'localhost'),
+  :host => (ENV['REDIS_HOST'] || 'localhost'),
   :port => (ENV['REDIS_PORT'] || '6379'),
   :password => ENV['REDIS_PASSWORD']
 )
