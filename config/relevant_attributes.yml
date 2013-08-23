@@ -8,3 +8,5 @@
 - rejected_connections
 - total_commands_processed
 - uptime_in_days
+- keyspace_hits
+- keyspace_misses
