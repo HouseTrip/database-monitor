@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require File.expand_path('../../config/init', __FILE__)
+RedisMonitor.run

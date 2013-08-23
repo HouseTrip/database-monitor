@@ -1,2 +1,10 @@
 - used_memory
 - used_memory_peak
+- connected_clients
+- expired_keys
+- evicted_keys
+- instantaneous_ops_per_sec
+- used_cpu_sys
+- rejected_connections
+- total_commands_processed
+- uptime_in_days

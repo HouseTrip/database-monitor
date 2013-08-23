@@ -14,7 +14,7 @@ module RedisMonitor
     private
 
     def relevant_attributes
-      @relevant_attributes = YAML.load(File.open File.expand_path('../../config/relevant_attributes.yml', __FILE__))
+      @relevant_attributes = YAML.load(File.open File.expand_path('../../../config/relevant_attributes.yml', __FILE__))
     end
 
   end

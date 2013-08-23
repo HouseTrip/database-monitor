@@ -1,11 +1,9 @@
 class DataDogPusher
 
-  def initialize(connection_options)
-    @options = connection_options
-  end
-
   def push(data)
-    datadog.push(data)
+    data.each_pair do |metric, value|
+      DataDogClient.emit_point("redis.#{metric}", value)
+    end
   end
 
 end
