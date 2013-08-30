@@ -12,7 +12,7 @@ RedisConnection = Redis.new(
 require 'dogapi'
 DataDogClient = Dogapi::Client.new(
   ENV['DATADOG_API'] || 'dummy',
-  ENV['DATADOG_APP'] || 'f757260a80ff5f8018ba3d70656f3ba693d794aa'
+  ENV['DATADOG_APP']
 )
 
 require File.expand_path('../../lib/redis_monitor', __FILE__)
