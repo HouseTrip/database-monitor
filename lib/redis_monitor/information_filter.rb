@@ -2,6 +2,7 @@ require 'yaml'
 
 module RedisMonitor
   class InformationFilter
+    CONFIG_FILE_NAME = File.expand_path('../../../config/relevant_attributes.yml', __FILE__)
 
     def initialize(info)
       @info = info
@@ -14,7 +15,7 @@ module RedisMonitor
     private
 
     def relevant_attributes
-      @relevant_attributes = YAML.load(File.open File.expand_path('../../../config/relevant_attributes.yml', __FILE__))
+      @relevant_attributes = YAML.load(File.open CONFIG_FILE_NAME)
     end
 
   end
