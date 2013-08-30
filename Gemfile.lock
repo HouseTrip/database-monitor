@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/HouseTrip/rufus-runner.git
+  revision: 792bab9d97eb734a0f9530ef2b3a1d823fb97af6
+  specs:
+    rufus-runner (0.0.1)
+      eventmachine
+      rufus-scheduler (>= 2.0.22)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -5,6 +13,7 @@ GEM
     dogapi (1.8.1)
       json (>= 1.5.1)
     dogstatsd-ruby (1.2.0)
+    eventmachine (1.0.3)
     json (1.8.0)
     multi_json (1.7.9)
     rake (10.1.0)
@@ -17,10 +26,13 @@ GEM
     rspec-expectations (2.8.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.8.0)
+    rufus-scheduler (2.0.23)
+      tzinfo (>= 0.3.23)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
+    tzinfo (1.0.1)
 
 PLATFORMS
   ruby
@@ -32,4 +44,5 @@ DEPENDENCIES
   rake
   redis
   rspec (~> 2.8.0)
+  rufus-runner!
   simplecov

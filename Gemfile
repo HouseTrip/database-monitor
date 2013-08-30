@@ -4,6 +4,7 @@ gem 'redis'
 gem 'dogstatsd-ruby'
 gem 'dogapi'
 gem 'rake'
+gem 'rufus-runner', github: 'HouseTrip/rufus-runner', require: false
 
 group :development do
   gem "rspec", "~> 2.8.0"
