@@ -7,6 +7,7 @@ GEM
     dogstatsd-ruby (1.2.0)
     json (1.8.0)
     multi_json (1.7.9)
+    rake (10.1.0)
     redis (3.0.4)
     rspec (2.8.0)
       rspec-core (~> 2.8.0)
@@ -28,6 +29,7 @@ DEPENDENCIES
   bundler (~> 1.0)
   dogapi
   dogstatsd-ruby
+  rake
   redis
   rspec (~> 2.8.0)
   simplecov

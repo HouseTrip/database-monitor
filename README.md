@@ -3,11 +3,24 @@ redis-monitor-tool
 
 A redis monitor tool that pushes data to Datadog
 
+This program sends an `INFO` command to a redis server,
+and forwards the important stats to DataDog.
+
 
 Configuration
 =============
 
-You must configure this enviromental variables to run the service:
+Customization
+----
+
+The list of stats that are forwarded to Datadog can be configurated at
+`./config/relevant_attributes.yml`
+
+
+Env
+-----
+
+You must configure this enviroment variables to run the service:
 
 ```
 DATADOG_API
