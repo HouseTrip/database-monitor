@@ -1,7 +1,7 @@
 require 'simplecov'
 SimpleCov.start
 
-require File.expand_path('../../config/init', __FILE__)
+require_relative '../config/init'
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))

@@ -1,5 +1,5 @@
-require File.expand_path('../redis_monitor/information_filter', __FILE__)
-require File.expand_path('../redis_monitor/datadog_pusher', __FILE__)
+require_relative 'redis_monitor/information_filter'
+require_relative 'redis_monitor/datadog_pusher'
 
 module RedisMonitor
   def self.run

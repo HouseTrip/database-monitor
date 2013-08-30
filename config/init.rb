@@ -15,4 +15,4 @@ DataDogClient = Dogapi::Client.new(
   ENV['DATADOG_APP']
 )
 
-require File.expand_path('../../lib/redis_monitor', __FILE__)
+require_relative '../lib/redis_monitor'
