@@ -24,7 +24,6 @@ You must configure this enviroment variables to run the service:
 
 ```
 DATADOG_API
-DATADOG_APP
 REDIS_HOST
 REDIS_PASSWORD
 REDIS_PORT

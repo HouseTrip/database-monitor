@@ -10,9 +10,6 @@ RedisConnection = Redis.new(
 )
 
 require 'dogapi'
-DataDogClient = Dogapi::Client.new(
-  ENV['DATADOG_API'] || 'dummy',
-  ENV['DATADOG_APP']
-)
+DataDogClient = Dogapi::Client.new(ENV['DATADOG_API'] || 'dummy')
 
 require_relative '../lib/redis_monitor'
