@@ -78,7 +78,7 @@ you want with `heroku restart`
 To verify if everything is running you can check the logs:
 
 ```
-heroku --logs --tail
+heroku logs --tail
 
 #=> 2013-08-30T12:47:02.307760+00:00 app[worker.1]: [rufus 2013-08-30 12:47:02.307] scheduler started
 #=> 2013-08-30T12:47:02.776333+00:00 app[worker.1]: [rufus 2013-08-30 12:47:02.309] scheduled 'redis_information_push'
