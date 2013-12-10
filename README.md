@@ -1,9 +1,9 @@
-Watchdog
+Database-monitor
 ==================
 
 A service monitoring tool that pushes data to Datadog
 
-This program queries a service and forwards the important stats to DataDog.
+This program queries a database(Mongo or Redis) and forwards the important stats to DataDog.
 
 
 Configuration
@@ -27,11 +27,7 @@ DATADOG_API
 REDIS_HOST
 REDIS_PASSWORD
 REDIS_PORT
-MONGO_HOST
-MONGO_PORT
-MONGO_DB
-MONGO_USER
-MONGO_PASSWORD
+MONGO_URI (mongodb://us3r:passw0rd@mongo.host.com:10052/database_name)
 ```
 
 if deploying on heroku it's as easy as:
@@ -64,11 +60,7 @@ heroku config
 #=> REDIS_HOST:     your_redis_host_url_should_be_here
 #=> REDIS_PASSWORD: the_password_to_it_if_any
 #=> REDIS_PORT:     the_port_your_redis_is_running
-#=> MONGO_HOST:     mongo_server_address
-#=> MONGO_PORT:     the_port_mongo_is_running_on
-#=> MONGO_DB:       the_database_you_want_to_watch
-#=> MONGO_USER:     login_username
-#=> MONGO_PASSWORD: login_password
+#=> MONGO_URI:      the_full_uri_to_the_database
 
 ```
 

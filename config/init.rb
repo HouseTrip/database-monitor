@@ -10,12 +10,8 @@ RedisConnection = Redis.new(
 )
 
 require 'mongo'
-mongo_host     = ENV['MONGO_HOST']     || 'localhost'
-mongo_port     = ENV['MONGO_PORT']     || 27017
-mongo_db       = ENV['MONGO_DB']       || ''
-mongo_user     = ENV['MONGO_USER']     || ''
-mongo_password = ENV['MONGO_PASSWORD'] || ''
-MongoConnection = Mongo::Connection.from_uri("mongodb://#{mongo_user}:#{mongo_password}@#{mongo_host}:#{mongo_port}/#{mongo_db}")
+mongo_uri = ENV['MONGO_URI'] || 'mongodb://localhost:27017/'
+MongoConnection = Mongo::Connection.from_uri(mongo_uri)
 
 require 'dogapi'
 DataDogClient = Dogapi::Client.new(ENV['DATADOG_API'] || 'dummy')
