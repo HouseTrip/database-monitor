@@ -7,4 +7,3 @@ redis:
 mongo:
   - objects
   - avgObjSize
-  - dataSize
