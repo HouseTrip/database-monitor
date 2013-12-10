@@ -7,7 +7,7 @@ module Watchdog
       info.each_pair do |metric, value|
         DataDogClient.should_receive(:emit_point).with("redis.#{metric}", value)
       end
-      DataDogPusher.new.push('redis', info)
+      DataDogPusher.push('redis', info)
     end
   end
 end

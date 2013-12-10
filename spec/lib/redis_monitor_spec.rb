@@ -1,20 +1,18 @@
 require 'spec_helper'
 
 describe Watchdog::RedisMonitor do
-  it "should get information from Redis to DataDog" do
-    redis_info = double
-    RedisConnection.stub(:info).and_return(redis_info)
-    filter_info = double
-    Watchdog::InformationFilter.any_instance.stub(:relevant_only).and_return(filter_info)
+  let(:filter_info) { double }
+  let(:filter) { double(:relevant_only => filter_info) }
 
-    RedisConnection.should_receive(:info)
-    Watchdog::InformationFilter.any_instance.should_receive(:relevant_only)
-    Watchdog::DataDogPusher.any_instance.should_receive(:push).with('redis', filter_info)
+  it 'should get information from Redis to DataDog' do
+    Watchdog::InformationFilter.stub(:new => filter)
+
+    Watchdog::DataDogPusher.should_receive(:push).with('redis', filter_info)
 
     Watchdog::RedisMonitor.run
   end
 
-  it "should send to Datadog the correct attributes" do
+  it 'should send to Datadog the correct attributes' do
     Watchdog::InformationFilter.stub(:config_file_name =>
       File.expand_path('../../fixtures/attributes.yml', __FILE__))
 

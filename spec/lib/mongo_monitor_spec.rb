@@ -3,18 +3,17 @@ require 'spec_helper'
 describe Watchdog::MongoMonitor do
   let(:stats) { { 'objects' => 3, 'avgObjSize' => 1000, 'dataSize' => 12893 } }
   let(:mongo_info) { double(:stats => stats, :name => 'name') }
+  let(:filter_info) { double }
+  let(:filter) { double(:relevant_only => filter_info) }
 
   before(:each) do
     MongoConnection.stub(:db => mongo_info)
   end
 
   it 'should get information from Mongo to DataDog' do
-    filter_info = double
-    Watchdog::InformationFilter.any_instance.stub(:relevant_only).and_return(filter_info)
+    Watchdog::InformationFilter.stub(:new => filter)
 
-    MongoConnection.should_receive(:db)
-    Watchdog::InformationFilter.any_instance.should_receive(:relevant_only)
-    Watchdog::DataDogPusher.any_instance.should_receive(:push).with('mongo.name', filter_info)
+    Watchdog::DataDogPusher.should_receive(:push).with('mongo.name', filter_info)
 
     Watchdog::MongoMonitor.run
   end
