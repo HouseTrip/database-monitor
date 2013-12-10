@@ -19,10 +19,10 @@ task :default => :spec
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  require_relative 'lib/redis_monitor/version.rb'
+  require_relative 'lib/watchdog/version.rb'
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "redis_monitor #{RedisMonitor::VERSION}"
+  rdoc.title = "redis_monitor #{Watchdog::VERSION}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
