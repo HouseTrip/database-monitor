@@ -1,5 +1,9 @@
-- used_memory
-- used_memory_peak
-- connected_clients
-- expired_keys
-- evicted_keys
+redis:
+  - used_memory
+  - used_memory_peak
+  - connected_clients
+  - expired_keys
+  - evicted_keys
+mongo:
+  - objects
+  - avgObjSize

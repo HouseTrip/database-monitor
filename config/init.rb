@@ -9,7 +9,12 @@ RedisConnection = Redis.new(
   :password => ENV['REDIS_PASSWORD']
 )
 
+require 'mongo'
+mongo_uri = ENV['MONGO_URI'] || 'mongodb://localhost:27017/'
+MongoConnection = Mongo::Connection.from_uri(mongo_uri)
+
 require 'dogapi'
 DataDogClient = Dogapi::Client.new(ENV['DATADOG_API'] || 'dummy')
 
-require_relative '../lib/redis_monitor'
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+require 'database_monitor'

@@ -1,6 +1,8 @@
 source "http://rubygems.org"
 
 gem 'redis'
+gem 'bson_ext'
+gem 'mongo'
 gem 'dogstatsd-ruby'
 gem 'dogapi'
 gem 'rake'
