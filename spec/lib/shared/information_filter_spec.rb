@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Watchdog
+module DatabaseMonitor
   describe InformationFilter do
     subject { described_class.new(db, info) }
 

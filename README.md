@@ -48,14 +48,14 @@ brew install heroku-toolbelt
 Add the heroku git repository to your git remote, for example:
 
 ```shell
-git remote add heroku git@heroku.com:watchdog.git
+git remote add heroku git@heroku.com:database_monitor.git
 ```
 
 Be sure you have the env variables in heroku correct:
 
 ```shell
 heroku config
-#=> === Config Vars for watchdog
+#=> === Config Vars for database_monitor
 #=> DATADOG_API:    some_api_key_should_be_here
 #=> REDIS_HOST:     your_redis_host_url_should_be_here
 #=> REDIS_PASSWORD: the_password_to_it_if_any
@@ -126,7 +126,7 @@ Running Locally
 To run the service standalone:
 
 ```shell
-./bin/watchdog
+./bin/database_monitor
 ```
 
 To run it in a loop every 60s:

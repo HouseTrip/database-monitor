@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Watchdog
+module DatabaseMonitor
   describe DataDogPusher do
     it 'should push each key and value to datadog' do
       info = { 'metric1' => 100, 'metric2' => 200 }

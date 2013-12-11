@@ -1,6 +1,6 @@
 require 'yaml'
 
-module Watchdog
+module DatabaseMonitor
   class InformationFilter
     def initialize(type, info)
       @type = type

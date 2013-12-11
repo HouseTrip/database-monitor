@@ -1,4 +1,4 @@
-module Watchdog
+module DatabaseMonitor
   module DataDogPusher
     def self.push(type, data)
       data.each_pair do |metric, value|

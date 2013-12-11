@@ -16,4 +16,5 @@ MongoConnection = Mongo::Connection.from_uri(mongo_uri)
 require 'dogapi'
 DataDogClient = Dogapi::Client.new(ENV['DATADOG_API'] || 'dummy')
 
-require_relative '../lib/watchdog'
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+require 'database_monitor'
