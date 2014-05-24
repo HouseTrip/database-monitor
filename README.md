@@ -20,7 +20,7 @@ The list of stats that are forwarded to Datadog can be configurated at
 Env
 -----
 
-You must configure this enviroment variables to run the service:
+You must configure these environment variables to run the service:
 
 ```
 DATADOG_API
@@ -48,7 +48,7 @@ brew install heroku-toolbelt
 Add the heroku git repository to your git remote, for example:
 
 ```shell
-git remote add heroku git@heroku.com:database_monitor.git
+git remote add heroku git@heroku.com:database-monitor-production.git
 ```
 
 Be sure you have the env variables in heroku correct:
@@ -72,11 +72,11 @@ The command heroku will run is at `./Procfile`, to deploy just:
 git push heroku master
 ```
 
-note that the running branch on heroku is always the master, you can
+Note that the running branch on heroku is always the master, you can
 cross push branches, but the heroku side must always be the master branch.
 
-Everytime you deploy your app should restart, you still can restart it manually if
-you want with `heroku restart`
+Every time you deploy your app should restart, you still can restart it manually
+if you want with `heroku restart`
 
 To verify if everything is running you can check the logs:
 
